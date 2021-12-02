@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KSPBundleDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" UrlName="avalonsky" Name="avalonsky" CreatedTime="-8585631329553371154" AutoLoad="false">
+  <Author>Tholin</Author>
+  <Info />
+  <Assets>
+    <Asset Name="Tholin/Unlit/BetterSky" Path="Assets/Skybox/Shaders/BetterSkybox.shader" Type="Shader" Url="Skybox/Shaders/BetterSkybox" AutoLoad="false" />
+  </Assets>
+  <Dependencies />
+</KSPBundleDefinition>
