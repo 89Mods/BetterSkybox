@@ -39,6 +39,7 @@ namespace BetterSkybox
                 foreach(ConfigNode rootNode in config.config.GetNodes("Skybox"))
                 {
                     float galaxyFadeBias = 0, starsFadeBias = 0, galaxyMinBrightness = 0, galaxyMaxBrightness = 1, starsMinBrightness = 0, starsMaxBrightness = 1;
+                    float starsHaloThreshold = 1, starsMaxHalo = 10, starsScale = 2.5f, starsHaloBrightness = 0.1f;
                     if (rootNode.HasValue("GalaxyFadeBias")) galaxyFadeBias = float.Parse(rootNode.GetValue("GalaxyFadeBias"));
                     if (rootNode.HasValue("StarsFadeBias")) starsFadeBias = float.Parse(rootNode.GetValue("StarsFadeBias"));
                     if (rootNode.HasValue("GalaxyMinBrightness")) galaxyMinBrightness = float.Parse(rootNode.GetValue("GalaxyMinBrightness"));
@@ -51,18 +52,26 @@ namespace BetterSkybox
                     float galaxyAtmoFadeMax = 1, starsAtmoFadeMax = 1;
                     if (rootNode.HasValue("GalaxyAtmoFadeMax")) galaxyAtmoFadeMax = float.Parse(rootNode.GetValue("GalaxyAtmoFadeMax"));
                     if (rootNode.HasValue("StarsAtmoFadeMax")) starsAtmoFadeMax = float.Parse(rootNode.GetValue("StarsAtmoFadeMax"));
+                    if (rootNode.HasValue("StarsHaloThreshold")) starsHaloThreshold = float.Parse(rootNode.GetValue("StarsHaloThreshold"));
+                    if (rootNode.HasValue("StarsMaxHalo")) starsMaxHalo = float.Parse(rootNode.GetValue("StarsMaxHalo"));
+                    if (rootNode.HasValue("StarsScale")) starsScale = float.Parse(rootNode.GetValue("StarsScale"));
+                    if (rootNode.HasValue("StarsHaloBrightness")) starsHaloBrightness = float.Parse(rootNode.GetValue("StarsHaloBrightness"));
+                    float galaxyExposure = 1, starsExposure = 1;
+                    if (rootNode.HasValue("GalaxyExposure")) galaxyExposure = float.Parse(rootNode.GetValue("GalaxyExposure"));
+                    if (rootNode.HasValue("StarsExposure")) starsExposure = float.Parse(rootNode.GetValue("StarsExposure"));
 
+                    Texture2D starsTex;
+                    if(rootNode.HasValue("StarsTex")) starsTex = GameDatabase.Instance.GetTexture(rootNode.GetValue("StarsTex"), false);
+                    else starsTex = Texture2D.blackTexture;
                     for (int i = 0; i < 6; i++)
                     {
-                        Texture2D galaxyTex, starTex;
+                        Texture2D galaxyTex;
                         if (rootNode.HasValue("GalaxyTex")) galaxyTex = GameDatabase.Instance.GetTexture(rootNode.GetValue("GalaxyTex") + texNames[i], false);
                         else galaxyTex = Texture2D.blackTexture;
-                        if (rootNode.HasValue("StarsTex")) starTex = GameDatabase.Instance.GetTexture(rootNode.GetValue("StarsTex") + texNames[i], false);
-                        else starTex = Texture2D.blackTexture;
 
                         Material mat = new Material(skyboxShader);
                         mat.SetTexture("_GalaxyTex", galaxyTex);
-                        mat.SetTexture("_StarTex", starTex);
+                        mat.SetTexture("_StarsTex", starsTex);
                         mat.SetFloat("_GalaxyFadeBias", galaxyFadeBias);
                         mat.SetFloat("_StarsFadeBias", starsFadeBias);
                         mat.SetFloat("_GalaxyMinBrightness", galaxyMinBrightness);
@@ -70,9 +79,15 @@ namespace BetterSkybox
                         mat.SetFloat("_StarsMinBrightness", starsMinBrightness);
                         mat.SetFloat("_StarsMaxBrightness", starsMaxBrightness);
                         mat.SetFloat("_GalaxyColorBias", galaxyColorBias);
-                        mat.SetFloat("_StarColorBias", galaxyColorBias);
+                        mat.SetFloat("_StarColorBias", starsColorBias);
                         mat.SetFloat("_GalaxyAtmoFadeMax", galaxyAtmoFadeMax);
                         mat.SetFloat("_StarsAtmoFadeMax", starsAtmoFadeMax);
+                        mat.SetFloat("_HaloThreshold", starsHaloThreshold);
+                        mat.SetFloat("_MaxHalo", starsMaxHalo);
+                        mat.SetFloat("_StarScale", starsScale);
+                        mat.SetFloat("_HaloBrightness", starsHaloBrightness);
+                        mat.SetFloat("_GalaxyExposure", galaxyExposure);
+                        mat.SetFloat("_StarsExposure", starsExposure);
 
                         switch (i)
                         {

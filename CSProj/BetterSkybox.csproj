@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BetterSkybox</RootNamespace>
     <AssemblyName>BetterSkybox</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -50,10 +50,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>/run/media/tholin/4500c215-1fa4-44ae-b5e5-67d48bd832bc/general/KSP_Saves/Avalon_EoE/KSP_Data/Managed/Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>/run/media/tholin/4500c215-1fa4-44ae-b5e5-67d48bd832bc/general/KSP_Saves/Avalon_EoE/KSP_Data/Managed/Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,22 +64,22 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>/run/media/tholin/4500c215-1fa4-44ae-b5e5-67d48bd832bc/general/KSP_Saves/Avalon_EoE/KSP_Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>/run/media/tholin/4500c215-1fa4-44ae-b5e5-67d48bd832bc/general/KSP_Saves/Avalon_EoE/KSP_Data/Managed/UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>/run/media/tholin/4500c215-1fa4-44ae-b5e5-67d48bd832bc/general/KSP_Saves/Avalon_EoE/KSP_Data/Managed/UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>/run/media/tholin/4500c215-1fa4-44ae-b5e5-67d48bd832bc/general/KSP_Saves/Avalon_EoE/KSP_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>/run/media/tholin/4500c215-1fa4-44ae-b5e5-67d48bd832bc/general/KSP_Saves/Avalon_EoE/KSP_Data/Managed/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>/run/media/tholin/4500c215-1fa4-44ae-b5e5-67d48bd832bc/general/KSP_Saves/Avalon_EoE/KSP_Data/Managed/UnityEngine.UIModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
